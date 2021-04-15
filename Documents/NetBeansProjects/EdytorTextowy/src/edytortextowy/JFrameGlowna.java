@@ -52,7 +52,6 @@ public class JFrameGlowna extends javax.swing.JFrame {
         jTextArea1.setName("textArea"); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setLabel("Otworz");
         jButton1.setName("buttonOtworz"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +59,6 @@ public class JFrameGlowna extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Zapiszs");
         jButton2.setName("buttonZapisz"); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +84,7 @@ public class JFrameGlowna extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(26, 26, 26)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
         );
@@ -125,7 +123,7 @@ public class JFrameGlowna extends javax.swing.JFrame {
             jTextArea1.read( new FileReader( file.getAbsolutePath() ), null );
         }catch (IOException e) {
             System.out.println("Nie mogę otworzyć pliku: "+file.getAbsolutePath());
-            System.out.println("Problem: "+e);
+            System.out.println("Problemm: "+e);
         }
     }
     }//GEN-LAST:event_jButton1ActionPerformed
