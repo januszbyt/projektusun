@@ -43,7 +43,7 @@ public class PrimaryController implements Initializable{
     
     // Tworzenie listy i wypełnienie jej danymi
     ObservableList<Osoba> dane = FXCollections.observableArrayList(
-         new Osoba("Baran", "Janek", 20.0),
+         new Osoba("Baran", "Janeczek", 20.0),
          new Osoba("Nowak", "Maciej",  30.0),
          new Osoba("Nowak", "Anna", 30.0),
          new Osoba("Les", "wacek", 41.0),
