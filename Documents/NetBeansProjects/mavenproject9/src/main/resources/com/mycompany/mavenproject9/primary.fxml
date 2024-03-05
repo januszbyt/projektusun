@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject9.PrimaryController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Baza">
+            <items>
+                  <MenuItem fx:id="menu_pobierz" mnemonicParsing="false" onAction="#otworzPlikAction" text="Pobierz dane" />
+                  <MenuItem fx:id="menu_zapisz" mnemonicParsing="false" onAction="#zapiszPlikAction" text="zapisz dane" />
+                  <MenuItem fx:id="menu_dodaj" mnemonicParsing="false" onAction="#dodajelementAction" text="Dodaj element" />
+                  <MenuItem fx:id="menu_usun" mnemonicParsing="false" onAction="#usunelementAction" text="Usun element" />
+              <MenuItem fx:id="menu_zamknij" mnemonicParsing="false" onAction="#zamknijAplikacjeAction" text="Zamknij" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <TableView fx:id="tabela" prefHeight="375.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="NazwiskoColumn" prefWidth="75.0" text="Nazwisko" />
+          <TableColumn fx:id="ImieColumn" prefWidth="60.0" text="Imie" />
+            <TableColumn fx:id="WiekColumn" prefWidth="75.0" text="wiek" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="menu_usun2" mnemonicParsing="false" onAction="#usunelementAction" text="Usun element" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </left>
+   <bottom>
+      <Pane prefHeight="118.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nazwisko_tekst" layoutX="14.0" layoutY="14.0" promptText="Nazwisko" />
+            <TextField fx:id="imie_tekst" layoutX="14.0" layoutY="47.0" promptText="Imie" />
+            <TextField fx:id="wiek_tekst" layoutX="14.0" layoutY="79.0" promptText="wiek" />
+            <Button fx:id="przycisk_dodaj" layoutX="184.0" layoutY="47.0" mnemonicParsing="false" onAction="#dodajelementAction" text="Dodaj" />
+            <Button fx:id="przycisk_rysuj" layoutX="293.0" layoutY="47.0" mnemonicParsing="false" onAction="#rysujwykresAction" text="Rysuj wykres wieku" />
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <PieChart fx:id="wykres1PieChart" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
